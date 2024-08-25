@@ -1,0 +1,283 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+</style>
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color-primario: #F3F5FC;
+    --color-secundario: #0A3871;
+}
+
+body {
+    background-color: var(--color-primario);
+    height: 100vh;
+    margin: 2%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px; 
+}
+
+.header__logo {
+    padding: 40px;
+}
+
+.samael__logo{
+    padding: 40px;
+    max-width: 200px;
+    width: 90%;
+}
+
+.container__contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 240px;
+}
+
+.container_instruccion{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+.container__encriptador, .container__desencriptador {
+    width: 100%; 
+    max-width: 350px; 
+    padding: 12px; 
+    border-radius: 20px; 
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box; 
+    margin: 0 auto; 
+    width: 48%; 
+    max-width: none; 
+}
+
+.container__encriptador:hover, .container__desencriptador:hover {
+    background-color: #124a8d;
+    cursor: pointer;
+}
+
+
+.container__input {
+    border: none;
+    background-color: #F3F5FC;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    color: #0A3871; 
+    font-size: 32px;
+    margin-bottom: 700px;
+}
+.container__input::placeholder {
+    color: #0A3871;
+    font-size: 32px;
+}
+.container__input:focus {
+    outline: none;
+}
+
+.box__inicial, .box__encriptado, .box__final {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 36px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 944px;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+
+
+
+.box__inicial__h2, .box__encriptado__h2, .box__final__h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    color: #343A40;
+    font-weight: bolder;
+    text-align: center;
+    padding: 0 10px;
+    
+}
+
+.box__inicial__p, .box__final__p {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #343A40;
+    font-weight: lighter;
+    text-align: center;
+    padding: 0 32px;
+}
+
+.box__inicial__muñeco, .box__encriptado__muñeco, .box__final__muñeco {
+    margin-top: 243px;
+    margin-left: 32px;
+}
+
+.container__copiado {
+    background-color: #ffffff;
+    color: #0A3871;
+    border-radius: 24px;
+    padding: 18px;
+    border: 1px solid #0A3871;
+    width: 350px;
+    margin-top: 800px;
+}
+
+.container__copiado:hover {
+    background-color: #D4E6F1;
+    cursor: pointer;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #D4E6F1;
+
+}
+
+.footer__p{
+    font-family: "Inter", sans-serif;
+    font-size: 30px; 
+    text-align: center;
+    padding: 1.5rem;
+}
+.footer__logo{
+    width: 90%; 
+    max-width: 200px;
+}
+
+@media(max-width: 1200px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; 
+    }
+
+    .header__logo {
+        padding: 10px;
+    }
+
+    .container__contenido {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 5px;
+    }
+
+    .container__botones {
+        display: flex;
+        gap: 10px;   
+    }
+
+    .box__inicial, .box__encriptado {
+        height: 140px;
+        width: 95%; 
+        max-width: 800px;
+        margin-top: 64px;
+    }
+
+    .box__inicial__muñeco, .box__encriptado__muñeco, .container__copiado {
+        display: none;
+    }
+}
+
+@media(max-width: 480px) {
+    .header__logo {
+        padding: 5px;
+    }
+
+    .container__contenido {
+        padding: 10px;
+        align-items: center;
+    }
+
+
+    .box__inicial, .box__encriptado {
+        height: auto; 
+        margin-top: 24px;
+        width: 95%; 
+        max-width: 400px;
+    }
+
+    .container__botones {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .header__logo{
+        display: none;
+    }
+
+    .samael__logo{
+        height: auto; 
+        width: 95%; 
+        max-width: 230px;
+    }
+
+    .footer__p{
+        font-family: "Inter", sans-serif;
+        font-size: 15px; 
+    }
+
+    
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .container__contenido {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+    
+        .box__inicial, .box__encriptado {
+            width: 90%; 
+            max-width: 600px; 
+            margin: 20px auto; 
+        }
+    
+        .container__botones {
+            width: 100%; 
+            justify-content: space-around; 
+        }
+        
+        .container__encriptador, .container__desencriptador {
+            width: 48%; /* Los botones ocupan el 48% del ancho cada uno, dejando espacio entre ellos */
+            margin: 10px 0;
+        }
+        .container_instruccion{
+            font-family: "Inter", sans-serif;
+            font-size: 10px;
+
+        }
+    }
+    .container_instruccion{
+        font-family: "Inter", sans-serif;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .footer__p{
+        font-family: "Inter", sans-serif;
+        font-size: 15px; 
+    }
+
+}
+
+
+

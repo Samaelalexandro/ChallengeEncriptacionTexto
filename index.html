@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head class>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge encriptador texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <main class="main__container">
+        <header class="header">
+            <img class="header__logo" src="Logo.png" alt="Logo de la empresa">
+            <img class="samael__logo" src="samael-logo.png">
+        </header>
+        <div class="container">
+            <div class="container__contenido">
+                <div class="container__informaciones">
+                    <div class="container__texto">
+                        <h1></h1>
+                        <p class="texto__parrafo"></p>
+                    </div>
+                    <input type="text" id="inputTexto" class="container__input" placeholder="Ingrese el texto aquí">
+                    <div class="container__botones">
+                        <p class="container_informativo">
+                            Solo letras minúsculas y sin acentos
+                        </p>
+                        <button onclick="encriptarTexto();" class="container__encriptador">Encriptar</button>
+                        <button onclick="desencriptarTexto();" class="container__desencriptador" id="desencriptador" disabled>Desencriptar</button>
+                    </div>
+                </div>
+
+                <div class="container__box__inicial" id="contenedorOriginal">
+                    <div class="box__inicial">
+                        <img class="box__inicial__muñeco" src="Muñeco.png" alt="Ilustración de muñeco">
+                        <h2 class="box__inicial__h2" id="boxInicial">Ningún mensaje fue encontrado</h2>
+                        <p class="box__inicial__p">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
+                </div>
+
+                <div class="container__box__encriptado" id="contenedorEncriptado" style="display:none;">
+                    <div class="box__encriptado">
+                        <h2 class="box__encriptado__h2" id="boxEncriptado"></h2>
+                        <button onclick="copiarEncriptacion();" class="container__copiado">Copiar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+
+<footer class="footer">
+    <p class="footer__p">
+        Desarrollado por Samael Antonio
+    </p>
+</footer>
+</html>
